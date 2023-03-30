@@ -47,7 +47,7 @@ class Clogui:
 
     def Iniciar(self):
         sg.popup_no_titlebar(
-            'Bem_Vindos\nProjeto #07 - Sistema de Login.\nPrincipais funcionalidades desse Sistema:\nCadastrar Novos Usuários;\nEfetuar Login de usuário Cadastrado;\nCriar e\ou Atualizar o arquivo de Usuários.', font=12, text_color='blue')
+            'Bem_Vindos\nProjeto #07 - Sistema de Login Uniasselvi.\nFuncionalidades desse Sistema:\nCadastrar Novos Usuários;\nEfetuar Login de usuário Cadastrado;\nCriar e\ou Atualizar o arquivo de Usuários.', font=12, text_color='blue')
         while True:
             eventos, valores = self.janela.read()
             login = self.janela['login'].get()
@@ -83,7 +83,7 @@ class Clogui:
                     self.janela.hide()
             # Janela de Boas vindas
 #                    sg.popup_no_titlebar(
-#                        f'Bem Vindo, {login} seu login foi realizado com sucesso!', font=14, text_color='blue')
+#                        f'Bem Vindo, {login} seu login a Uniasselvi foi realizado com sucesso!', font=14, text_color='blue')
                     self.janela1_ativa = True
                     layout1 = [
                         [sg.Text(
@@ -98,12 +98,12 @@ class Clogui:
                         self.limpar(valores['login'], valores['senha'])
                 else:
                     sg.popup_no_titlebar(
-                        f'Você deve ter digitado o nome de usuário e/ou a senha errado.\n Por favor verefique.', font=12, text_color='red')
+                        f'Você deve ter digitado o nome de usuário e/ou a senha errado.\n Por favor verifique!', font=12, text_color='red')
                     self.limpar(valores['login'], valores['senha'])
 
     # Opção 3
             if eventos == 'Sair':
-                sg.popup_no_titlebar('GoodBay!', font='18', text_color='blue')
+                sg.popup_no_titlebar('Até mais, a Uniasselvi agracede!', font='18', text_color='blue')
                 self.janela.close()
 
 

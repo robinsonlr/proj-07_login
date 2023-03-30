@@ -5,12 +5,12 @@ import stdiomask
 from time import sleep
 init(autoreset=True)
 
-# Criar o Menu de Opções
+# Menu de Opções
 
 
 def exibir_menu():
     print(Fore.GREEN + '''       Bem-Vindos ao Projeto
-          Sistema de Login        
+          Sistema de Login Uniasselvi       
 Escolha uma Opção:
 [1] Cadastrar novo usuário
 [2] Fazer login
@@ -27,7 +27,7 @@ Escolha uma Opção:
 
 def fazer_login():
     login = input('Nome: ')
-    senha = stdiomask.getpass(prompt='Senha: ', mask='')
+    senha = stdiomask.getpass(prompt='Senha: ', mask='*')
     return(login, senha)
 #    senha = stdiomask.getpass(prompt='Senha: ', mask='*')
 
@@ -82,9 +82,9 @@ while True:
             exit()
         else:
             print(
-                Fore.RED+'Você deve ter digitado seu nome de usuário ou a senha errado.\n Por favor verefique.')
+                Fore.RED+'Você deve ter digitado seu nome de usuário ou a senha errado.\n Por favor verifique.')
             sleep(2)
     else:
         system('cls')
-        print(Fore.LIGHTMAGENTA_EX+'GoodBay!')
+        print(Fore.LIGHTMAGENTA_EX+'Até mais, a Uniasselvi agracede!')
         break
